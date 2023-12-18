@@ -1,0 +1,29 @@
+configargparse
+matplotlib
+ipywidgets
+jupyterlab
+mahotas
+numpy
+Cython
+opencv-python
+napari
+munkres
+pymongo
+scikit-image
+networkx
+toml
+scipy
+pandas
+torch
+tensorflow
+zarr>=2.10.2
+stardist @ git+https://github.com/stardist/stardist.git@c0564459e344b62d5b50db83546de6b478db890c
+git+https://github.com/funkey/waterz.git
+git+https://github.com/funkelab/funlib.math
+-e git+https://github.com/funkelab/linajea.git#egg=linajea
+-e git+https://github.com/abred/daisy@ab7b82054126a50ab4ad5dcf2ef885b02d33aab8#egg=daisy
+-e git+https://github.com/funkelab/funlib.run#egg=funlib.run
+
+-e git+https://github.com/funkelab/funlib.learn.torch#egg=funlib.learn.torch
+-e git+https://github.com/funkelab/funlib.learn.tensorflow#egg=funlib.learn.tensorflow
+-e git+https://github.com/funkey/gunpowder@6ffafcfdd3f7c7cdb61eedcb325814804dff4b2d#egg=gunpowder

@@ -1,0 +1,12 @@
+
+data/
+
+figs/
+
+linajea_results/
+
+pickles/
+
+stardist_models/
+
+.DS_Store

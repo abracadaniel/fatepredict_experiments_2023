@@ -1,0 +1,51 @@
+[[parameters]]
+weight_node_score = -0.1
+selection_constant = -1
+track_cost = 4
+weight_division = 1
+division_constant = 2.5
+weight_child = 2.0
+weight_continuation = -1.0
+weight_edge_score = -0.1
+max_cell_move = 0
+val = true
+block_size = [ 3, 15, 25, 25,]
+
+[[parameters]]
+weight_node_score = -1
+selection_constant = -0.5
+track_cost = 3
+weight_division = 5
+division_constant = 2.5
+weight_child = 1.0
+weight_continuation = -1.0
+weight_edge_score = -1
+max_cell_move = 45
+val = true
+block_size = [ 3, 15, 25, 25,]
+
+[[parameters]]
+weight_node_score = -1
+selection_constant = 2
+track_cost = 1
+weight_division = -10
+division_constant = 2.5
+weight_child = 2.0
+weight_continuation = -1.0
+weight_edge_score = -1
+max_cell_move = 45
+val = true
+block_size = [ 3, 15, 25, 25,]
+
+[[parameters]]
+weight_node_score = -13
+selection_constant = 12
+track_cost = 7
+weight_division = -8
+division_constant = 6.0
+weight_child = 1.0
+weight_continuation = -1.0
+weight_edge_score = 0.35
+max_cell_move = 45
+val = true
+block_size = [ 3, 15, 25, 25,]

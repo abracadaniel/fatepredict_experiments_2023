@@ -1,0 +1,33 @@
+
+[general]
+logging = 20
+db_host = "localhost"
+seed = 42
+setup_dir = "example_basic"
+sparse = false
+
+[extract]
+edge_move_threshold = 0
+block_size = [3,15,15,15]
+
+[solve]
+parameters = "config_parameters.toml"
+context = [ 2, 2, 2, 2,]
+solver_type = "basic"
+
+[inference_data]
+checkpoint = 10
+cell_score_threshold = 0.2
+[inference_data.data_source]
+
+voxel_size = [ 0, 1, 1, 1,]
+db_name = "anno2030"
+[inference_data.data_source.datafile]
+filename = "anno_alice_T2030_tiny.zarr"
+array = "Fragments"
+[inference_data.data_source.roi]
+offset = [ 0, 0, 0, 0,]
+shape = [ 3, 15, 30, 30,]
+
+
+

@@ -1,0 +1,33 @@
+Block cabdidategraph_extract_edges/1 with read ROI [0:3, 0:15, 0:15, 15:30] (3, 15, 15, 15) and write ROI [0:3, 0:15, 0:15, 15:30] (3, 15, 15, 15) failed in worker 1
+Traceback (most recent call last):
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/src/daisy/daisy/client.py", line 85, in acquire_block
+    yield block
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/src/daisy/daisy/task.py", line 179, in _process_blocks
+    self.process_function(block)
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/example/../blockwise/candidate_graph_blockwise.py", line 144, in <lambda>
+    process_function=lambda b: extract_edges_in_block(
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/example/../blockwise/candidate_graph_blockwise.py", line 81, in extract_edges_in_block
+    graph_provider = linajea.utils.CandidateDatabase(data.db_name,
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/src/linajea/linajea/utils/candidate_database.py", line 63, in __init__
+    super().__init__(
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/src/daisy/daisy/persistence/mongodb_graph_provider.py", line 141, in __init__
+    raise e
+  File "/mnt/d/Spaces/Education/00.KU/Thesis/code/fatepredict_experiments_desktop/src/daisy/daisy/persistence/mongodb_graph_provider.py", line 103, in __init__
+    if self.db_name not in self.client.list_database_names():
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/mongo_client.py", line 2128, in list_database_names
+    return [doc["name"] for doc in self.list_databases(session, nameOnly=True)]
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/mongo_client.py", line 2110, in list_databases
+    res = admin._retryable_read_command(cmd, session=session)
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/database.py", line 870, in _retryable_read_command
+    return self.__client._retryable_read(_cmd, read_preference, session)
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/mongo_client.py", line 1606, in _retryable_read
+    server = self._select_server(read_pref, session, address=address)
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/mongo_client.py", line 1436, in _select_server
+    server = topology.select_server(server_selector)
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/topology.py", line 250, in select_server
+    return random.choice(self.select_servers(selector, server_selection_timeout, address))
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/topology.py", line 211, in select_servers
+    server_descriptions = self._select_servers_loop(selector, server_timeout, address)
+  File "/home/daniel/.miniconda3/envs/fatepredict/lib/python3.10/site-packages/pymongo/topology.py", line 226, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 651565846990fc8a7350bb2c, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused')>]>

@@ -1,5 +1,5 @@
 # FatePredict Experiments
-Various experiments for Cell Instance Segmentation and Tracking in 3D microscopy timelapse images
+Various experiments for Cell Instance Segmentation and Tracking in 3D microscopy timelapse images.
 
 ## Installation
 Many of the libraries has deprecated depedencies in newer versions, so use the specified versions to avoid dependency incompatibilities. 
@@ -17,7 +17,7 @@ This was a bit tricky to get working on a M2 MacBook, as some of the packages ar
 1. `conda create --name fatepredict_linajea python=3.10 cython boost pytorch pyscipopt -c pytorch -c funkey -c conda-forge`
 2. `conda activate fatepredict_linajea`
 3. Install Gurobi solver @ https://www.gurobi.com/
-4. `cd Linajea/src/pylp && pip install .`
+4. `pip install Repos/pylp`
 5. `pip install -r requirements_linajea.txt`
 
 ### MultiPlanar U-Net Environment
